@@ -73,8 +73,10 @@ c <- sub("Mag", "Magnitude", c)
 colnames(data) <- c
 
 ## Step 5: Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
-dm <- melt(data, id.vars = c("activity", "subject"))
-tidyData <- ddply(dm, .(activity, subject, variable), summarize, mean=mean(value))
+tidyData <- ddply(data, .(activity, subject), colwise(function(x) mean(x)))
 
 ## output the data
 write.table(tidyData, file = "output.txt", row.names = FALSE, quote = FALSE)
+
+## read the file in
+r <- read.table(file = "output.txt", header = TRUE)
