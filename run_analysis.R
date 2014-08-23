@@ -18,7 +18,7 @@ x_test <- read.table("./UCI HAR Dataset/test/X_test.txt")
 y_test <- read.table("./UCI HAR Dataset/test/y_test.txt")
 subject_test <- read.table("./UCI HAR Dataset/test/subject_test.txt")
 
-# update the Y data column name and add it to the X data
+# update the Y and Subject data column name and add it to the X data
 colnames(y_test) <- c("activity")
 colnames(subject_test) <- c("subject")
 test <- cbind(cbind(y_test, subject_test), x_test)
