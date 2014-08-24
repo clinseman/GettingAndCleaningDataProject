@@ -13,7 +13,7 @@ Step 1: Merges the training and the test sets to create one data set.
 - update the column names in the data file based on the features in the features file
 
 Step 2: Extracts only the measurements on the mean and standard deviation for each measurement. 
-- use a regex to subset only column names that contain -mean(, -std(, activity or subject. The exact regex is: "-mean\\(|-std\\(|activity|subject"
+- use a regex to subset only column names that contain -mean(, -std(, activity or subject. The exact regex is: `-mean\\(|-std\\(|activity|subject`
 
 Step 3: Uses descriptive activity names to name the activities in the data set
 
