@@ -1,3 +1,5 @@
+# Read Me
+
 Steps to reproduce the Tidy Data set from the original data.
 
 Make sure to run the run_analysis.r script from a directory that contains the original version of the UCI HAR Dataset folder.
